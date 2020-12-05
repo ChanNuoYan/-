@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{40796594-E39A-43C7-BC65-63C488084F06}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataMining", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{40796594-E39A-43C7-BC65-63C488084F06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{18F11262-4429-4BBC-AFD9-11BF47608671}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\README.md = ..\..\..\Downloads\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
