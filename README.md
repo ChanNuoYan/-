@@ -54,11 +54,11 @@ int minDistance2(string s1, string s2)//LD算法
 **模仿字典**
 冗余数据中存在非空但不相等的数据，利用vector存储两张表中该列的数据，再用模仿字典统计出现最多次数的数据，作为代表数据
 ```
-string countve(vector<string>&vec) {//作为字典，统计vector中某元素出现的次数，返回次数最多的元素
+string countve(vector<string>&vec) //作为字典，统计vector中某元素出现的次数，返回次数最多的元素
 ```
 **双表联动去冗余**
 
 ```
-void comparedata(string(*table)[16], string(*table2)[16],int length,int len) {//去冗余
+void comparedata(string(*table)[16], string(*table2)[16],int length,int len) //去冗余
 ```
 
