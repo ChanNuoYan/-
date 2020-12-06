@@ -61,4 +61,5 @@ string countve(vector<string>&vec) //作为字典，统计vector中某元素出�
 ```
 void comparedata(string(*table)[16], string(*table2)[16],int length,int len) //去冗余
 ```
-
+### 5.总结
+**数据预处理：**去数据冗余、处理数据缺失、处理数据的不一致性，比较关键的点在于**【数据不一致性】的区分和同步、【数据冗余】的判断、【数据缺失】的完善方法选择**
