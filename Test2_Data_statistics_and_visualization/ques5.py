@@ -20,3 +20,4 @@ def ques5(data):
     get = sort(data)
     df = pd.DataFrame(get, index=range(106), columns=["index1", "index2", "index3"])
     print("ques5","\n",df)
+    df.to_csv('E:\\result.txt', index=False, sep=",")
