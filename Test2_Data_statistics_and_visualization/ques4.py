@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import math
-def covandvar(data):
+def table(data):
     newtable = np.zeros((106, 106), dtype=float)
     list0 = []
     mean = []
@@ -53,6 +53,6 @@ def paint(correlation_matrix):
     plt.savefig('C:/Users/羊小猪/PycharmProjects/testpython')
     plt.show()
 def ques4(data):
-    a=covandvar(data)
+    a=table(data)
     paint(a)
     return a
