@@ -75,6 +75,8 @@ for j in data[i].values:#排除掉nan数据
 从而得到最接近的三个样本构成的矩阵
   ```
   sort(array)
+  其中：
+  list1.append(sorted(array[i], key=lambda x: (x < 0, abs(x)))
    ```
 ### 5.总结
 利用matplotlib画图工具的同时熟悉画图的过程，在对数据处理的同时，因为经历了第一个过程，所以知道C10列绝对是空列，所以在读取操作数据的同时避开了**NAN**数据，并且对于**Constitution**列的转换为数值类型的处理，采用的是随机范围数，因为如果采用单一值替代的方法，数值是停留在几条直线上的。
