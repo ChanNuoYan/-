@@ -59,9 +59,39 @@ string countve(vector<string>&vec) //作为字典，统计vector中某元素出�
 **双表联动去冗余**
 因为对一个表进行处理的话，手上的数据是有限的，所以在对一表进行处理的同时对另外一个表进行对比。
 冗余部分
-如果遇到有相同特征但数据不同的条目，从中进行字典统计，从中选择出现次数更多的数据的条目，并且记录下冗余部分的索引号，选择删除。
+如果遇到有相同特征但数据不同的条目，从中进行字典统计，从中选择出现次数更多的数据的条目，并且记录下冗余部分的索引号，在索引号统计完毕后，从低索引号开始往高索引号进行移动，若遇到了新的要去冗余的部分，则此之后的数据条目往前的偏移量+1.
+
 ```
 void comparedata(string(*table)[16], string(*table2)[16],int length,int len) //去冗余
+```
+**当存在缺失值**
+当一个表存在缺失值的时候，对另一个表的相似条目进行对比，若数据非空则用非空一方的数据进行填充，数据为空则不处理。
+```
+void whenlackmes(string *table1, string *table2)
+```
+**处理新表，用均值填充**
+当我们得到一张新的表的时候，我们因为也存在一些两张表都没有的数据，所以合并的新表中部分数据也将为空。对这部分数据进行均值填充。
+```
+void handle(string(*excel)[16],int length)
+```
+**Z_Score**
+该部分进行Z-score归一化处理，计算出其方差与均值后进行归一化，并返回归一化的结果。
+```
+//Z-Score
+double z_score(vector<double>&gzsum) {
+	double sum = 0;
+	double avg = average(gzsum, gzsum.size());
+	double var = variance(gzsum, gzsum.size());
+	for (int i = 0; i < gzsum.size(); i++) {
+		sum = sum+(gzsum[i] - avg) / var;
+	}
+	return sum / gzsum.size();
+}
+```
+**UTF8ToGB**
+原题目中的Constitution列是存在中文数据的，预先调试的时候发现读取是会根据源文件的编码类型UTF8而出现问题，所以用这一步将原本是UTF8编码的数据转换为GB。
+```
+char* UTF8ToGB(const char* utf8)
 ```
 ### 5.总结
 **数据预处理：**去数据冗余、处理数据缺失、处理数据的不一致性，比较关键的点在于**【数据不一致性】的区分和同步、【数据冗余】的判断、【数据缺失】的完善方法选择**
