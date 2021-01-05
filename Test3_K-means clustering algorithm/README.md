@@ -25,7 +25,7 @@
 
 **手肘法：**
 
-![手肘法](https://img-blog.csdn.net/20180111174114444?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTU3Mzg1MDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+![手肘法](https://img-blog.csdnimg.cn/20210105174915942.jpg)
 
 ### 3.语言
 **语言：C++、Python、Markdown**
