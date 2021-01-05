@@ -53,7 +53,7 @@ K-Means的算法流程下图所示，这里使用的是周志华教授《机器�
 **语言：C++、Python、Markdown**
 
 ### 4.主要函数解释
-**【分数转换】**
+**【K_Means】**
 
 ```
 void ClusterMethod::k_means_Calculate(vector<vector<vector<double>>>&v)
