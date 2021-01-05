@@ -27,6 +27,10 @@
 
 ![手肘法](https://img-blog.csdnimg.cn/20210105174915942.jpg)
 
+**欧式距离：**
+
+![欧式距离](https://img-blog.csdnimg.cn/20210105175301875.png)
+
 ### 3.语言
 **语言：C++、Python、Markdown**
 
@@ -34,11 +38,11 @@
 **【分数转换】**
 
 ```
-turnscore(data)
+void ClusterMethod::k_means_Calculate(vector<vector<vector<double>>>&v)
 ```
+设置最大迭代次数**time=50**
 
-
-因为原数据中存在**Constitution**列是**Object**类型数据，需要转换成**Float数值类型数据**，对于每个评级 **[bad,general,good,excellent]** ，利用**np.random.randint(min,max,1)** 对分数进行转换。
+距离计算利用欧式距离公式
 
 **【去掉NAN数据】**
 
