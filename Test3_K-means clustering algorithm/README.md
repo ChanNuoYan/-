@@ -1,1 +1,83 @@
+## 实验三  《k-means聚类算法》
+
+**实验项目：**
+实验K-Means聚类方法，并实现可视化
+### 1.题目要求：
+
+**用C++实现k-means聚类算法**
+
+**1. 对实验二中的z-score归一化的成绩数据进行测试，观察聚类为2类，3类，4类，5类的结果，观察得出什么结论？**
+
+**2. 由老师给出测试数据，进行测试，并画出可视化出散点图，类中心，类半径，并分析聚为几类合适。**
+
+### 2.相关公式
+**均值公式：**
+
+![均值公式](https://img-blog.csdnimg.cn/20201205164837659.jpg#pic_center)
+
+**协方差公式：**
+
+![协方差公式](https://img-blog.csdnimg.cn/20201205164858214.jpg#pic_center)
+
+**z-score规范化：**
+
+![z-score规范化](https://img-blog.csdnimg.cn/2020120516490490.jpg#pic_center)
+
+**手肘法：**
+
+![手肘法](https://img-blog.csdn.net/20180111174114444?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMTU3Mzg1MDE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+### 3.语言
+**语言：C++、Python、Markdown**
+
+### 4.主要函数解释
+**【分数转换】**
+
+```
+turnscore(data)
+```
+
+
+因为原数据中存在**Constitution**列是**Object**类型数据，需要转换成**Float数值类型数据**，对于每个评级 **[bad,general,good,excellent]** ，利用**np.random.randint(min,max,1)** 对分数进行转换。
+
+**【去掉NAN数据】**
+
+```
+for j in data[i].values:#排除掉nan数据
+            if math.isnan(j) :
+                  break
+ ```
+ 因为对于原文件有补缺失的操作，所以如果存在NAN可以直接直接排除掉。
+
+
+ **【均值、方差、Z-Score归一化】**
+
+ 函数对于数学公式进行复现
+
+
+ **【相关矩阵】**
+
+ 相关矩阵：**i行j列数据**表示原来**第i行和第j行的相关系数**
+ 首先分别得到**协方差矩阵**和**方差列表**
+ 再通过**协方差和方差**的计算得到**相关系数**
+ ```
+ table(data)
+ ```
+
+
+**【最接近的三个样本】**
+
+将得到的相关矩阵中每行对绝对值abs进行排序
+得到的前三个值就是最接近的样本
+从而得到最接近的三个样本构成的矩阵
+  ```
+  sort(array)
+  其中：
+  list1.append(sorted(array[i],reverse = True))
+   ```
+### 5.总结
+利用matplotlib画图工具的同时熟悉画图的过程，在对数据处理的同时，因为经历了第一个过程，所以知道C10列绝对是空列，所以在读取操作数据的同时避开了**NAN**数据，并且对于**Constitution**列的转换为数值类型的处理，采用的是随机范围数，因为如果采用单一值替代的方法，数值是停留在几条直线上的。
+
+计算相关矩阵的时候，对于行列操作需要清晰，虽然调用库函数更加简单，但是在体验这个过程的时候，也能根据公式以及过程去捋清代码思路。
+
 
