@@ -80,7 +80,7 @@ for j in data[i].values:#排除掉nan数据
   ```
 
 ### 5.结果show
-**问题1:** 以课程1成绩为x轴，体能成绩为y轴，画出散点图
+**问题1:以课程1成绩为x轴，体能成绩为y轴，画出散点图**
 
 
 
@@ -88,25 +88,25 @@ for j in data[i].values:#排除掉nan数据
 
 
 
-**问题2：**以5分为间隔，画出课程1的成绩直方图
+**问题2：以5分为间隔，画出课程1的成绩直方图**
 
 
 
 ![q2](https://img-blog.csdnimg.cn/20210109102725195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
-**问题3：**对每门成绩进行z-score归一化，得到归一化的数据矩阵
+**问题3：对每门成绩进行z-score归一化，得到归一化的数据矩阵**
 
 
 
 ![q3](https://img-blog.csdnimg.cn/20210109102848375.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
-**问题4：**计算出100x100的相关矩阵，并可视化出混淆矩阵
+**问题4：计算出100x100的相关矩阵，并可视化出混淆矩阵**
 
 
 
 ![q4](https://img-blog.csdnimg.cn/20210109102917167.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
-**问题5：**根据相关矩阵，找到距离每个样本最近的三个样本，得到100x3的矩阵
+**问题5：根据相关矩阵，找到距离每个样本最近的三个样本，得到100x3的矩阵**
 
 
 
