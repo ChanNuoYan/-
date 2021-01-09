@@ -129,6 +129,7 @@ if __name__ == '__main__':
     res = np.zeros(dimension)
     # 设置学习率为alpha
     alpha = 0.001
+    # 记录迭代次数
     time = 0
     # 迭代θ的过程
     while (res != theta).all():
