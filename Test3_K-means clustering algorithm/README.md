@@ -34,7 +34,7 @@
 
 **K_Means原理**
 
-K-Means的算法流程下图所示，这里使用的是周志华教授《机器学习》一书中的插图。用文字描述为：
+K-Means的算法流程下所示，这里对周志华教授《机器学习》一书中的插图用文字描述：
 
             1.首先确定K值（即你想把数据聚为几类，K值是K-Means算法中唯一的参数）；
 
@@ -116,8 +116,65 @@ while (getline(inFile, line))//getline(inFile, line)表示按行读取CSV文件�
 
 因为原数据导出时是带有行号和列名的形式，所以在这里对第0行和对第0列采取不操作的处理方式
 
+### 5.show
 
-### 5.总结
+a.K_means to test2
+
+对于第二题中归一化数据的处理：
+
+聚类二类数据情况部分截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109142718438.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+聚类三类数据情况部分截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109142823968.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+聚类四类数据情况部分截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109142911867.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+聚类五类数据情况部分截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021010914295754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+手肘图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021010914035362.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+【最佳K值为10】
+
+b.K_means to data from teacher
+
+对于彭老师在本题中给出的数据的处理：
+
+待分类数据情况：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143638410.png)
+
+聚类二类数据情况截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143126936.png)
+
+聚类三类数据情况截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143234387.png)
+
+聚类四类数据情况截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143349297.png)
+
+聚类五类数据情况截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143502906.png)
+
+手肘图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143543450.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+【最佳K值为3】
+
+### 6.总结
 本次实验对K_Means聚类算法进行了C++复现，并采用了简单的手肘法进行对K的选择，K_Means中是对聚类中心的不断更新到最后分类结果变化不大渐渐收敛的时候，生成最终的聚类结果。
 
 并且根据SSE的表述，存在一个突然变化巨大的点作为最佳的K值，K_Means是在聚类中不断收敛的。
