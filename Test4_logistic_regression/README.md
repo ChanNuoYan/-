@@ -124,6 +124,6 @@ get_test(filepath)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245614.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
 
-### 5.总结
+### 6.总结
 实验难点在于对逻辑回归公式中梯度下降的理解，但只要抓住了公式的要点，明白了每一步迭代的过程是为了找到最优解，原理理解参考了【winrar_setup.rar】先生的博客https://blog.csdn.net/weixin_39445556/article/details/83661219
 ，以及【吴恩达】先生的机器学习课程【梯度下降】、【多元梯度下降】。
