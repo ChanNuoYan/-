@@ -98,19 +98,30 @@ get_test(filepath)
 
 ### 5.show
 问题1：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245619.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
+
 问题3：
+
 训练点集分布情况【数值表示】：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245534.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245446.jpg#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245403.jpg#pic_center)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245271.jpg#pic_center)
+
 测试点集分布情况【数值表示】：
+
 α=0.01：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245228.jpg#pic_center)
+
 α=0.001：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245227.jpg#pic_center)
+
 测试点集和训练点集分布情况【图像表示】：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245614.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
 
 ### 5.总结
