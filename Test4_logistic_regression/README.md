@@ -15,18 +15,23 @@
 ### 2.相关公式：
 
 **sigmoid**
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105338821.png)
 
 **参数θ：**
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109104925784.png)
 
 **损失函数：**
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105017445.png)
 
 **对损失函数求偏导数：**
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105052603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 **梯度公式：**
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105123420.png)
 
 ### 3.语言
