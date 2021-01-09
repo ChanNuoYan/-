@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2020/11/18 10:54
+# @Author  : Adam
+# @Site    : 
+# @File    : Log.py
+# @Software: PyCharm
 import math
 
 
