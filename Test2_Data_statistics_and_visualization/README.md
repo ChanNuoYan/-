@@ -80,15 +80,15 @@ for j in data[i].values:#排除掉nan数据
   ```
 
 ### 5.结果show
-问题1:      
+**问题1:**      
 ![q1](https://img-blog.csdnimg.cn/20210109102655394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
-问题2：
+**问题2：**
 ![q2](https://img-blog.csdnimg.cn/20210109102725195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
-问题3：
+**问题3：**
 ![q3](https://img-blog.csdnimg.cn/20210109102848375.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
-问题4：
+**问题4：**
 ![q4](https://img-blog.csdnimg.cn/20210109102917167.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
-问题5：
+**问题5：**
 ![q5](https://img-blog.csdnimg.cn/20210109103047501.jpg)
 
 ### 6.总结
