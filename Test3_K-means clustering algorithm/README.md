@@ -40,15 +40,20 @@ K-Means的算法流程下所示，这里对周志华教授《机器学习》一�
 
             2.从原始数据集中随机选择K个点作为初始均值点（步骤1和2为准备工作）；
 
-            3.依次从原始数据集中取出数据，每取出一个数据就和K个均值点分别计算距离（默认计算点间的欧氏距离），和谁更近就归为这个均值点所在的簇；
+            3.依次从原始数据集中取出数据，每取出一个数据就和K个均值点分别计算距离（默认计算点间的欧氏距离），
+	    和谁更近就归为这个均值点所在的簇；
 
             4.当步骤3结束后，分别计算各簇当前的均值点（即求该簇中所有点的平均值）；
 
-            5.比较当前的均值点和上一步得到的均值点是否相同，如果相同，则K-Means算法结束，否则，将当前的均值点替换掉之前的均值点，然后重复步骤3。
+            5.比较当前的均值点和上一步得到的均值点是否相同，如果相同，则K-Means算法结束，
+	    否则，将当前的均值点替换掉之前的均值点，然后重复步骤3。
 
 **手肘法原理**
 
-       手肘法的核心思想是：随着聚类数k的增大，样本划分会更加精细，每个簇的聚合程度会逐渐提高，那么误差平方和SSE自然会逐渐变小。并且，当k小于真实聚类数时，由于k的增大会大幅增加每个簇的聚合程度，故SSE的下降幅度会很大，而当k到达真实聚类数时，再增加k所得到的聚合程度回报会迅速变小，所以SSE的下降幅度会骤减，然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，而这个肘部对应的k值就是数据的真实聚类数。当然，这也是该方法被称为手肘法的原因。
+       手肘法的核心思想是：随着聚类数k的增大，样本划分会更加精细，每个簇的聚合程度会逐渐提高，那么误差平方和SSE自然会逐渐变小。
+       并且，当k小于真实聚类数时，由于k的增大会大幅增加每个簇的聚合程度，故SSE的下降幅度会很大，而当k到达真实聚类数时，
+       再增加k所得到的聚合程度回报会迅速变小，所以SSE的下降幅度会骤减，然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，
+       而这个肘部对应的k值就是数据的真实聚类数。当然，这也是该方法被称为手肘法的原因。
        
 ### 3.语言
 **语言：C++、Python、Markdown**
@@ -154,17 +159,25 @@ b.K_means to data from teacher
 
 聚类二类数据情况截图：
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144033320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143126936.png)
 
 聚类三类数据情况截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144108887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143234387.png)
 
 聚类四类数据情况截图：
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144127390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143349297.png)
 
 聚类五类数据情况截图：
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144144747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143502906.png)
 
