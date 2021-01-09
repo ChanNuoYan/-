@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2020/11/18 10:27
+# @Author  : Adam
+# @Site    : 
+# @File    : Log.py
+# @Software: PyCharm
 import numpy as np
 from matplotlib import pyplot as plt
 
