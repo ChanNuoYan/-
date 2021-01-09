@@ -13,73 +13,105 @@
 **3. 根据给定数据（实验三.2），用梯度下降算法进行数据拟合，并用学习好的模型对(2,6)分类。**
 
 ### 2.相关公式：
-**均值公式：**
 
-![均值公式](https://img-blog.csdnimg.cn/20201205164837659.jpg#pic_center)
+**sigmoid**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105338821.png)
 
-**协方差公式：**
+**参数θ：**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109104925784.png)
 
-![协方差公式](https://img-blog.csdnimg.cn/20201205164858214.jpg#pic_center)
+**损失函数：**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105017445.png)
 
-**z-score规范化：**
+**对损失函数求偏导数：**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105052603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
-![z-score规范化](https://img-blog.csdnimg.cn/2020120516490490.jpg#pic_center)
-
-**相关性：**
-
-![相关性](https://img-blog.csdnimg.cn/20201205164911317.jpg#pic_center)
+**梯度公式：**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109105123420.png)
 
 ### 3.语言
-**语言：C++、Markdown**
+
+**语言：Python、Markdown**
+
 ### 4.主要函数解释
-**LD算法**
-因为示例中存在着名字相差不大，可以辨别是同一个人的数据，所以用LD算法来判断名字，若偏差在一定范围之内，认定为同一个人，然后便于对**数据冗余**进行操作处理
-```
-int minDistance2(string s1, string s2)//LD算法
-```
-**模仿字典**
-冗余数据中存在非空但不相等的数据，利用vector存储两张表中该列的数据，再用模仿字典统计出现最多次数的数据，作为最后使用的数据。
-```
-string countve(vector<string>&vec) //作为字典，统计vector中某元素出现的次数，返回次数最多的元素
-```
-**双表联动去冗余**
-因为对一个表进行处理的话，手上的数据是有限的，所以在对一表进行处理的同时对另外一个表进行对比。
-冗余部分
-如果遇到有相同特征但数据不同的条目，从中进行字典统计，从中选择出现次数更多的数据的条目，并且记录下冗余部分的索引号，在索引号统计完毕后，从低索引号开始往高索引号进行移动，若遇到了新的要去冗余的部分，则此之后的数据条目往前的偏移量+1.
+
+**sigmoid函数**
+
+对sigmoid数学函数进行函数实现
 
 ```
-void comparedata(string(*table)[16], string(*table2)[16],int length,int len) //去冗余
+sigmoid(x)
 ```
-**当存在缺失值**
-当一个表存在缺失值的时候，对另一个表的相似条目进行对比，若数据非空则用非空一方的数据进行填充，数据为空则不处理。
+
+**绘sigmoid函数图像**
+
+随机获得从-6~6之间5000个点，作为x值
+
+根据x值代入sigmoid函数获得y值
+
 ```
-void whenlackmes(string *table1, string *table2)
+paint_sigmoid()
 ```
-**处理新表，用均值填充**
-当我们得到一张新的表的时候，我们因为也存在一些两张表都没有的数据，所以合并的新表中部分数据也将为空。对这部分数据进行均值填充。
+
+**更新梯度gradient**
+
+首先损失函数偏导数公式中【(h[x]-y)】部分
+
+再乘以各个特征值下的数据，并按特征值求和
+
+返回值为g即gradient
+
 ```
-void handle(string(*excel)[16],int length)
+update_gradient(number, theta, y, x, dimension)
 ```
-**Z_Score**
-该部分进行Z-score归一化处理，计算出其方差与均值后进行归一化，并返回归一化的结果。
+
+**读取训练文件**
+
+调用numpy.loadtxt函数对csv数据文件进行读取
+
 ```
-//Z-Score
-double z_score(vector<double>&gzsum) {
-	double sum = 0;
-	double avg = average(gzsum, gzsum.size());
-	double var = variance(gzsum, gzsum.size());
-	for (int i = 0; i < gzsum.size(); i++) {
-		sum = sum+(gzsum[i] - avg) / var;
-	}
-	return sum / gzsum.size();
-}
+handle_csv(filepath)
 ```
-**UTF8ToGB**
-原题目中的Constitution列是存在中文数据的，预先调试的时候发现读取是会根据源文件的编码类型UTF8而出现问题，所以用这一步将原本是UTF8编码的数据转换为GB。
+
+**读取测试文件**
+
+此处有两个函数，具体为什么写了两个，是因为在测试的过程中发现了np.loadtxt函数对于只有一行的csv文件是不能正确读取，
+
+即如果该csv有3列，但是读取后生成的数组数据中，它是作为3行存在的
+
+故正常使用的读取测试文件为以下函数
+
 ```
-char* UTF8ToGB(const char* utf8)
+get_test(filepath)
 ```
+
+**迭代θ过程**
+
+    # 迭代θ的过程
+    while (res != theta).all():
+        time += 1
+        res = theta
+        gradient = update_gradient(number, theta, y, x, dimension) / number
+        new_theta = theta - alpha * gradient
+        count = 0
+        theta = new_theta
+
+### 5.show
+问题1：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245619.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
+问题3：
+训练点集分布情况【数值表示】：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245534.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245446.jpg#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245403.jpg#pic_center)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245271.jpg#pic_center)
+测试点集分布情况【数值表示】：
+α=0.01：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245228.jpg#pic_center)
+α=0.001：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245227.jpg#pic_center)
+测试点集和训练点集分布情况【图像表示】：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245614.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
+
 ### 5.总结
-**数据预处理：**去数据冗余、处理数据缺失、处理数据的不一致性，比较关键的点在于**【数据不一致性】的区分和同步、【数据冗余】的判断、【数据缺失】的完善方法选择**
-对两个数据源的数据进行整合清洗，对数据预处理有了进一步的认识，同时知道了数据预处理的步骤：数据清洗、数据集成、数据变换和数据规约。
-本次实验主要涉及数据清洗，如针对数据数值上的各种异常情况，根据数值异常情况的不同，对数据清理具体包括移除异常值、替换缺失值、将干扰数据进行平滑处理以及纠正不一致数据。在进行数据清洗等预处理操作的之前，首先对数据模型进行一定的观察，分辨数据的表达方式的异同点，再进行读取操作的选择、统一类型的选择等。
+实验难点在于对逻辑回归公式中梯度下降的理解，但只要抓住了公式的要点，明白了每一步迭代的过程是为了找到最优解，原理理解参考了【winrar_setup.rar】先生的博客https://blog.csdn.net/weixin_39445556/article/details/83661219，以及【吴恩达】先生的机器学习课程【梯度下降】、【多元梯度下降】。
