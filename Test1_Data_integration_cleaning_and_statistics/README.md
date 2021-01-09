@@ -1,6 +1,3 @@
-
-
-
 ## 实验一《多源数据集成、清洗和统计》
 
 **实验题目**： 广州大学某班有同学100人，现要从两个数据源汇总学生数据。第一个数据源在数据库中，第二个数据源在txt文件中，两个数据源课程存在缺失、冗余和不一致性，请用C/C++/Java程序实现对两个数据源的一致性合并以及每个学生样本的数值量化。
@@ -148,7 +145,25 @@ double z_score(vector<double>&gzsum) {
 ```
 char* UTF8ToGB(const char* utf8)
 ```
-### 5.总结
+
+### 5.show
+
+a.原数据源情况：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109134940161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109135123529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+**观察数据源数据分布情况从而拟定处理方案
+Ⅰ存在冗余数据
+Ⅱ存在缺失数据**
+
+b.题目完成情况：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109135419908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+c.处理后的新表情况：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021010913572545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+### 6.总结
 **数据预处理：**去数据冗余、处理数据缺失、处理数据的不一致性，比较关键的点在于**【数据不一致性】的区分和同步、【数据冗余】的判断、【数据缺失】的完善方法选择**
 对两个数据源的数据进行整合清洗，对数据预处理有了进一步的认识，同时知道了数据预处理的步骤：数据清洗、数据集成、数据变换和数据规约。
 本次实验主要涉及数据清洗，如针对数据数值上的各种异常情况，根据数值异常情况的不同，对数据清理具体包括移除异常值、替换缺失值、将干扰数据进行平滑处理以及纠正不一致数据。在进行数据清洗等预处理操作的之前，首先对数据模型进行一定的观察，分辨数据的表达方式的异同点，再进行读取操作的选择、统一类型的选择等。
