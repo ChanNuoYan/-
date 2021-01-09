@@ -48,6 +48,58 @@
 ### 4.主要函数解释
 **LD算法**
 因为示例中存在着名字相差不大，可以辨别是同一个人的数据，所以用LD算法来判断名字，若偏差在一定范围之内，认定为同一个人，然后便于对**数据冗余**进行操作处理
+LD算法原理：
+算法目的：计算出两字符序列的编辑距离，同时也能求出两序列的匹配序列
+
+假设：
+比对的俩序列为：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101909513.png)
+
+则两序列的长度分别为len(A) = n，Len(B)=m；
+LD(A,B)：字符串A和字符串B的编辑距离，即将字符串A转换为字符串B所用的最少字符操作数。
+LD(A,B)=0表示两个字符串完全一样。
+LD(i,j)=LD(a1a2……ai,b1b2……bj)，其中0≤i≤N，0≤j≤M
+
+算法步骤：
+
+初始化算法分数矩阵H，使行i表示字符ai，列j表示字符bj；
+
+计算矩阵中每一项的LD(i, j)：
+
+若ai = bj，则LD(i, j) = LD(i-1, j-1) 取左上角的值
+
+若ai ≠ bj，则LD(i, j) = Min( LD(i-1, j-1), LD(i-1, j), LD(i, j-1) ) +1
+
+回溯，从矩阵右下角开始：
+
+若ai=bj，则回溯到左上角单元格；
+
+若ai≠bj，回溯到左上角、上边、左边中值最小的单元格，若有相同最小值的单元格，优先级按照左上角、上边、左边的顺序。
+
+根据回溯路径，写出匹配字符串：
+
+若回溯到左上角单元格，将ai添加到匹配字串A‘，将bj添加到匹配字串B’；
+
+若回溯到上边单元格，将ai添加到匹配字串A’，将_添加到匹配字串B’；
+
+若回溯到左边单元格，将_添加到匹配字串A’，将bj添加到匹配字串B’。
+
+矩阵右下角的值即为俩序列的编辑距离，回溯结果为全部匹配序列。
+
+示例：
+
+**A=GGATCGA，B=GAATTCAGTTA**
+
+评分矩阵：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109102059262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+回溯：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109102135508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+结果：
+LD(A,B) = 5;
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109102244248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 ```
 int minDistance2(string s1, string s2)//LD算法
 ```
@@ -57,6 +109,9 @@ int minDistance2(string s1, string s2)//LD算法
 string countve(vector<string>&vec) //作为字典，统计vector中某元素出现的次数，返回次数最多的元素
 ```
 **双表联动去冗余**
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101350688.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
 因为对一个表进行处理的话，手上的数据是有限的，所以在对一表进行处理的同时对另外一个表进行对比。
 冗余部分
 如果遇到有相同特征但数据不同的条目，从中进行字典统计，从中选择出现次数更多的数据的条目，并且记录下冗余部分的索引号，在索引号统计完毕后，从低索引号开始往高索引号进行移动，若遇到了新的要去冗余的部分，则此之后的数据条目往前的偏移量+1.
