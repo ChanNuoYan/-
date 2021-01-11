@@ -193,25 +193,25 @@ b.K_means to data from teacher
 
 聚类二类数据情况截图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144033320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210111173210181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143126936.png)
 
 聚类三类数据情况截图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144108887.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021011117332854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143234387.png)
 
 聚类四类数据情况截图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144127390.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210111173347229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143349297.png)
 
 聚类五类数据情况截图：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109144144747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210111173406248.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109143502906.png)
 
