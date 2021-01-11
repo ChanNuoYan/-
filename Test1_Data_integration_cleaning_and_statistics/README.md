@@ -158,6 +158,7 @@ char* UTF8ToGB(const char* utf8)
 ### 5.show
 
 a.原数据源情况：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109134940161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109135123529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
@@ -167,9 +168,11 @@ a.原数据源情况：
 Ⅱ存在缺失数据**
 
 b.题目完成情况：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109135419908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 c.处理后的新表情况：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2021010913572545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 ### 6.总结
