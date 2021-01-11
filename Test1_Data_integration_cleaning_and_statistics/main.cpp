@@ -498,8 +498,8 @@ void ques3(string(*a)[16]) {
 	double gzz;
 	double shz;
 	buildtable(a, gz, sh,110);
-	gzz = z_score(gz);
-	shz = z_score(sh);
+	gzz = average(gz,gz.size());
+	shz = average(sh,sh.size());
 	if (gzz > shz) {
 		cout << "Guangzhou girl nb"<<endl;
 	}
