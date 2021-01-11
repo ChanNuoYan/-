@@ -59,6 +59,7 @@ LD算法原理：
 
 假设：
 比对的俩序列为：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101909513.png)
 
 则两序列的长度分别为len(A) = n，Len(B)=m；
@@ -97,9 +98,11 @@ LD(i,j)=LD(a1a2……ai,b1b2……bj)，其中0≤i≤N，0≤j≤M
 **A=GGATCGA，B=GAATTCAGTTA**
 
 评分矩阵：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109102059262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 回溯：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109102135508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 结果：
