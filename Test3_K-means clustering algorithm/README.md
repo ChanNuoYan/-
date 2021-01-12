@@ -87,7 +87,7 @@ K-Means的算法流程下所示，这里对周志华教授《机器学习》一�
 
 K-Means采用的启发式方式由下图可以看出：
 
-![](https://img-blog.csdnimg.cn/20210112131121846.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzODU1OA==,size_16,color_FFFFFF,t_70#pic_center)
+![KM](https://img-blog.csdnimg.cn/20210112131121846.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgzODU1OA==,size_16,color_FFFFFF,t_70#pic_center)
 
 图a是数据集的初始状态，假设k=2。在图b中，我们随机选择两个k类所对应的类别质心，即图中红色质心和蓝色质心，
 然后分别求样本中所有点到这两个质心的距离，并并标记每个样本的类别为和该样本距离最小的质心的类别，如图c所示，
