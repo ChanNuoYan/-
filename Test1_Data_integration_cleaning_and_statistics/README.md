@@ -73,7 +73,7 @@
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200811535.png)
 
-4. 单列中字符数据含义冲突
+4.单列中字符数据含义冲突
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200817116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
