@@ -688,9 +688,17 @@ get_test(filepath)
 ### 5.show
 问题1：
 
+学习并画出sigmoid函数
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109101245619.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70#pic_center)
 
+问题2：
+
+设计梯度下降算法，实现逻辑回归模型的学习过程
+
 问题3：
+
+根据给定数据（实验三.2），用梯度下降算法进行数据拟合，并用学习好的模型对(2,6)分类
 
 训练点集分布情况【数值表示】：
 
@@ -715,4 +723,4 @@ get_test(filepath)
 
 ### 6.总结
 实验难点在于对逻辑回归公式中梯度下降的理解，但只要抓住了公式的要点，明白了每一步迭代的过程是为了找到最优解，原理理解参考了【winrar_setup.rar】先生的博客https://blog.csdn.net/weixin_39445556/article/details/83661219
-，以及【吴恩达】先生的机器学习课程【梯度下降】、【多元梯度下降】。其实整个过程就是完善h(x)=求和[θixi]),当i=0时,xi=1，即θ0x0作为常数项存在。
+，以及【吴恩达】先生的机器学习课程【梯度下降】、【多元梯度下降】。其实整个过程就是完善h(x)=求和[θixi]),而当i=0时,xi=1，即θ0x0作为常数项存在。
