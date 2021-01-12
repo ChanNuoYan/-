@@ -32,7 +32,9 @@
 **3. 比较广州和上海两地女生的平均体能测试成绩，哪个地区的更强些？**
 
 **4. 学习成绩和体能测试成绩，两者的相关性是多少？（九门课的成绩分别与体能成绩计算相关性）**
+
 ### 2.相关公式：
+
 **均值公式：**
 
 ![均值公式](https://img-blog.csdnimg.cn/20201205164837659.jpg#pic_center)
@@ -50,8 +52,39 @@
 ![相关性](https://img-blog.csdnimg.cn/20201205164911317.jpg#pic_center)
 
 ### 3.语言
+
 **语言：C++、Markdown**
+
 ### 4.主要函数解释
+
+**数据清洗与数据集成思路**
+
+观察数据情况，除了题目本身提到的【ID】、【性别】数据的表述不一致，数据源还有以下问题：
+
+1.整行数据的缺失和数据冗余
+
+ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200801133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+2.单列中部分数值数据缺失
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200806395.png)
+
+3.单列中全部数值数据缺失
+
+ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200811535.png)
+
+4. 单列中字符数据含义冲突
+
+ ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200817116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+
+通过以上对数据的观察，得到以下思路：
+1.	均数填充数值缺失数据
+2.	对两表中某一对象存在不一致的数据时，对该类数据进行字典统计，以存在最多的作为最终数据，其他数据舍之
+3.	删除冗余数据，并在删除之前对数据完整度较高、相对正确的数据进行保留
+4.	对不统一的数据表述进行统一化如【性别】
+5.	存在部分姓名高度拟合的，采取LD算法辨别是同一个人
+将处理后的表合并成新表并保存到本地
+
 **LD算法**
 因为示例中存在着名字相差不大，可以辨别是同一个人的数据，所以用LD算法来判断名字，若偏差在一定范围之内，认定为同一个人，然后便于对**数据冗余**进行操作处理
 LD算法原理：
@@ -113,6 +146,7 @@ LD(A,B) = 5;
 int minDistance2(string s1, string s2)//LD算法
 ```
 **模仿字典**
+
 冗余数据中存在非空但不相等的数据，利用vector存储两张表中该列的数据，再用模仿字典统计出现最多次数的数据，作为最后使用的数据。
 ```
 string countve(vector<string>&vec) //作为字典，统计vector中某元素出现的次数，返回次数最多的元素
@@ -129,16 +163,19 @@ string countve(vector<string>&vec) //作为字典，统计vector中某元素出�
 void comparedata(string(*table)[16], string(*table2)[16],int length,int len) //去冗余
 ```
 **当存在缺失值**
+
 当一个表存在缺失值的时候，对另一个表的相似条目进行对比，若数据非空则用非空一方的数据进行填充，数据为空则不处理。
 ```
 void whenlackmes(string *table1, string *table2)
 ```
 **处理新表，用均值填充**
+
 当我们得到一张新的表的时候，我们因为也存在一些两张表都没有的数据，所以合并的新表中部分数据也将为空。对这部分数据进行均值填充。
 ```
 void handle(string(*excel)[16],int length)
 ```
 **Z_Score**
+
 该部分进行Z-score归一化处理，计算出其方差与均值后进行归一化，并返回归一化的结果。
 ```
 //Z-Score
@@ -153,6 +190,7 @@ double z_score(vector<double>&gzsum) {
 }
 ```
 **UTF8ToGB**
+
 原题目中的Constitution列是存在中文数据的，预先调试的时候发现读取是会根据源文件的编码类型UTF8而出现问题，所以用这一步将原本是UTF8编码的数据转换为GB。
 ```
 char* UTF8ToGB(const char* utf8)
@@ -167,8 +205,10 @@ a.原数据源情况：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210109135123529.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 **观察数据源数据分布情况从而拟定处理方案
-Ⅰ存在冗余数据
-Ⅱ存在缺失数据**
+
+**Ⅰ存在冗余数据**
+
+**Ⅱ存在缺失数据**
 
 b.题目完成情况：
 
