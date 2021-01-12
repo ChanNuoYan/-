@@ -63,7 +63,7 @@
 
 1.整行数据的缺失和数据冗余
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200801133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200801133.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 2.单列中部分数值数据缺失
 
@@ -71,11 +71,11 @@
 
 3.单列中全部数值数据缺失
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200811535.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200811535.png)
 
 4. 单列中字符数据含义冲突
 
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200817116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20210112200817116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNzYxODA1,size_16,color_FFFFFF,t_70)
 
 通过以上对数据的观察，得到以下思路：
 1.	均数填充数值缺失数据
